@@ -1,0 +1,183 @@
+body{
+    		background: #f4f4f4;
+    		padding: 0;
+    		margin: 0;
+    	}
+    	form{
+    		margin:10px;
+    		margin-top:50px;
+    	}
+      #number {
+      	border-top:1px solid #DEDFE2;
+        padding: 6px;
+        height:20px;
+        line-height: 36px;
+        color: #666;
+        font-weight: 100;
+      }
+      .money{
+      	background: #fff;
+      	padding:8px 20px;
+      	border:1px solid #DEDFE2;
+      	border-radius: 6px;
+      }
+      .money header{
+      	padding-left: 4px;
+      	padding-top: 8px;
+      	font-size: 18px;
+      	font-family: "微软雅黑";
+      }
+      .btn{
+      	background: #06BF04;
+      	color: #fff;
+      }
+      .modal {
+			    position: fixed;
+			    left: 0;
+			    right:0;
+			    top: 0;
+			    bottom: 0  ;    
+			    /*background: rgba(0,0,0, .7);*/
+			    z-index: 999;
+			    font-size: 14px;
+			    color: #ccc;
+			    text-align: center;
+			    display: none;
+			}
+			.modal-dia{
+			    width: 200px;
+			    margin: 260px auto;
+			}
+			.modal-con {
+			    background: #222;
+			    border:none;
+			    border-radius: 8px;
+			    padding: 12px 30px;
+			    position: relative;
+			}
+			
+		
+			.modal-con a{
+			    position: absolute;
+			    top:0rem;
+			    right: 0.2rem;
+			    font-size: 0.3rem;
+			    color: #ccc;
+			}
+			.liu{
+				color: #666;
+			}
+			.more{
+				margin-top:10px;
+				font-size: 14px;
+				color: #3286c0;
+			}
+			
+			
+			
+			/*留言*/
+			.mt{
+		    position: fixed;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    background: rgba(0,0,0, 0.7);
+		    z-index: 999;
+		    display: none;
+			}
+			.mt-dialog {
+			    width: 260px;
+			    margin: 150px auto;
+			}
+			.mt-content {
+			    background:  #fafafa;  
+			    border-radius: 3px;
+			    padding: 16px;
+			    position: relative;
+			}
+			
+			.mt-content .mon{
+				margin-left: -20px;
+				  background: #fafafa;
+			    box-sizing: border-box;
+			    /*width: 100%;*/
+			    margin: 6px 0;
+			    
+			    border-radius: 2px;
+			    padding: 2px 6px;
+				  width:220px;
+			    /*margin-left: 0.1rem;*/
+			    /*margin-left: 5px;*/
+			    margin-top:-20px;
+			    line-height: 20px;
+			    outline: none;
+			    border: none;
+			    border-bottom: 1px solid #64D364;
+			    color: #000;
+			    font-size: 14px;
+			}
+			
+			.more{
+				  padding: 0;
+			    border:none;
+			    margin-bottom: 0.3rem;
+			    text-align: right;
+			    padding-right: 8px;
+			    line-height: 1.1;
+			}
+			
+			.mt-content h4 {
+			    margin-top:6px;
+			    font-size: 15px;
+			    color: #000;
+			    padding-bottom: 0.2rem;
+			   
+			}
+			.mt-content span{
+			    font-size: 16px;
+			    color: #0A0A0A;
+			}
+			.mt-content p{
+			    font-size: 12px;
+			    color: #777;
+			}
+			.yi{
+				margin-top:40px;
+				display: flex;
+			}
+			.yi div{
+				flex: 3;
+			}
+			.btn2,.btn3{
+				flex: 1;
+				background: #fafafa;
+				border: none;
+				font-size: 13.8px;
+			}
+			.btn2{
+				color: #666;
+			}
+			.btn3{
+				color: #06BF04;
+			}
+			.tips1{
+				margin-top:30px;
+			}
+			.tips1 p{
+				font-size: 13px;
+				color: #999;
+			}
+			.scr{
+				padding: 8px 12px;
+				display: flex;
+				font-size: 13px;
+				color: #d11010;
+				background: #fff;
+			}
+			.scr div{
+				flex: 3;
+			}
+			.scr marquee{
+				flex:11;
+			}

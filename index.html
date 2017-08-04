@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JK</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/jk-keyboard.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+  	<div class="scr">
+  		<div>友情提示：</div>
+  		<marquee>郑重提醒：谨防冒充找工作，兼职，培训，话费充值，游戏币充值，刷信誉等各种要求付款的诈骗行为，请勿上当受骗！</marquee>
+  	</div>
+  	<form id="form1" action="http://pay.goldepay.cn/mobile/AppQuick/AppFixedpay" method="post" >
+  	<div class="more" onclick="texCheck();">
+  		<span class="liu" id="lius"></span>
+  		<span class="more" id="more">添加留言</span>
+  	</div>
+  	<div class="money">
+  		 <header id="who"></header>
+  		 <h1 id="number"></h1>
+  <!--	隐藏域，给后台传的数据,一共5个数据-->
+  		 	 <input type="hidden" id="money" name="money" />
+  		 	 <input type="hidden" id="merId" name="merId" />
+  		 	 <input type="hidden" id="liqType" name="liqType" />
+  		 	 <input type="hidden" id="openType" name="openType" />
+  		 	 <input type="hidden" id="goodsbody" name="goodsbody" />
+  		 
+  	</div>
+  	
+  	<div class="tips1">
+  		<p>温馨提示：付款前请仔细核实收款人的信息，避免上当受骗。</p>
+  		<p>官方热线：400-873-2911</p>
+  	</div>
+    <div class="modal" >
+            <div class="modal-dia">
+            <div class="modal-con">
+            <form id="buy-form">
+                 <div class="tips" id="error"></div>
+            </form>
+			      </div>
+			  </div>
+		  </div>
+		<div class="mt" id="modal1">
+    <div class="mt-dialog">
+        <div class="mt-content">
+            <h4>添加留言</h4>
+                <div class="mone">
+                    <input class="mon" type="text" id="liumore" onkeyup="qb();" />
+                </div>
+                <p>最多输入10个字</p>
+                <div class="yi">
+                	<div></div>
+                	<input type="button" class="btn2" value="取消" id="close" onclick="close1();" />
+                	<input type="button" class="btn3" value="确定" id="qb" onclick="qbCheck();" />
+                </div>
+                
+        </div>
+    </div>
+		</div>
+    <div id="jk-keyboard" class="jk-keyboard">
+      <a class="jk-key jk-left-0 jk-top-0" data-code="1"><span>1</span></a>
+      <a class="jk-key jk-left-1 jk-top-0" data-code="2"><span>2</span></a>
+      <a class="jk-key jk-left-2 jk-top-0" data-code="3"><span>3</span></a>
+      <a class="jk-key jk-left-0 jk-top-1" data-code="4"><span>4</span></a>
+      <a class="jk-key jk-left-1 jk-top-1" data-code="5"><span>5</span></a>
+      <a class="jk-key jk-left-2 jk-top-1" data-code="6"><span>6</span></a>
+      <a class="jk-key jk-left-0 jk-top-2" data-code="7"><span>7</span></a>
+      <a class="jk-key jk-left-1 jk-top-2" data-code="8"><span>8</span></a>
+      <a class="jk-key jk-left-2 jk-top-2" data-code="9"><span>9</span></a>
+      <a class="jk-key jk-left-0 jk-top-3" id="keyboard-down">隐藏</a>
+      <a class="jk-key jk-left-1 jk-top-3" data-code="0"><span>0</span></a>
+      <a class="jk-key jk-left-2 jk-top-3" data-code="."><span>.</span></a>
+      <a class="jk-key jk-left-3 jk-top-0 jk-height-1" data-code="backspace">删除</a>
+      <input type="button" class="btn jk-key jk-left-3 jk-top-2 jk-height-1 jk-text " id="btn" value="确认" />
+      <!--<input type="button" class="jk-key jk-left-3 jk-top-2 jk-height-1  submit jk-text" value="确认" id="submit" />-->
+    </div>
+    </form>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jk-keyboard.js"></script>
+    
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script>
+      (function() {
+        var $number = $('#number');
+        JK.start({
+          container: '#jk-keyboard',
+          decimal: 3, // 最大小数位数
+          open: true, // 自动弹出键盘
+
+          // 按键被按下时的回调
+          onKeyDown: function(value) {
+            console.debug('onKeyDown', value);
+            // 可以返回false阻止输入
+            // if (parseFloat(value) > 1000) {
+            //   return false;
+            // }
+          },
+
+          // 按键弹起时的回调，这里可以获取最终输入结果
+          onKeyUp: function(value) {
+            console.debug('onKeyUp', value);
+//          console.log(value);
+            $number.text(value);
+          },
+
+          // 初始化完成的回调
+          onStart: function(keyboard) {
+            keyboard.$el.find('#keyboard-down').on('click', function() {
+              keyboard.close();
+            });
+            $number.on('click', function() {
+              keyboard.open();
+            });
+          }
+        });
+       
+      })();
+    </script>
+  </body>
+</html>
